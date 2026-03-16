@@ -48,7 +48,12 @@
       <div class="feature-card">
         <div class="feat-icon">🤖</div>
         <h3>Score IA Instantáneo</h3>
-        <p>Nuestro motor analiza más de 15 variables en tiempo real para darte una decisión en segundos con total transparencia.</p>
+        <p>Nuestro motor analiza más de 22 variables en tiempo real para darte una decisión en segundos con total transparencia.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feat-icon">🔐</div>
+        <h3>Verificación Multicapa</h3>
+        <p>6 fases de evaluación: identidad, capacidad de pago, historial, empleo, riesgo IA y decisión del comité.</p>
       </div>
       <div class="feature-card">
         <div class="feat-icon">👛</div>
@@ -56,9 +61,9 @@
         <p>Recibe tu préstamo directamente en tu billetera digital. Deposita, retira y transfiere fondos con un solo clic.</p>
       </div>
       <div class="feature-card">
-        <div class="feat-icon">🌍</div>
-        <h3>Multi-Moneda</h3>
-        <p>Solicita tu préstamo en USD, DOP, EUR, MXN, COP y 5 monedas más. Sin conversiones, sin sorpresas.</p>
+        <div class="feat-icon">📊</div>
+        <h3>Tasas Dinámicas</h3>
+        <p>Tu tasa de interés se asigna según tu perfil de riesgo. Mejor score = menor tasa. Desde 11.5% hasta 26% anual.</p>
       </div>
       <div class="feature-card">
         <div class="feat-icon">🧾</div>
@@ -66,14 +71,9 @@
         <p>Cada préstamo genera una factura digital completa lista para imprimir o guardar como PDF.</p>
       </div>
       <div class="feature-card">
-        <div class="feat-icon">📊</div>
-        <h3>Tabla de Amortización</h3>
-        <p>Visualiza cada cuota detallada: capital, interés y saldo. Tres sistemas: Francés, Alemán y Americano.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feat-icon">🔒</div>
-        <h3>100% Seguro</h3>
-        <p>Tus datos protegidos con encriptación de nivel bancario y autenticación segura en cada sesión.</p>
+        <div class="feat-icon">✦</div>
+        <h3>Puntos de Confianza</h3>
+        <p>Paga tus préstamos a tiempo y acumula Puntos de Confianza FJAP. Cada préstamo pagado te da ventajas en el siguiente.</p>
       </div>
     </div>
   </section>
@@ -82,12 +82,12 @@
   <section class="section" id="como-funciona" style="background:rgba(255,255,255,0.01);border-top:1px solid var(--border);border-bottom:1px solid var(--border);max-width:100%;padding-left:0;padding-right:0">
     <div style="max-width:1100px;margin:0 auto;padding:0 24px">
       <h2 class="section-title">¿Cómo funciona?</h2>
-      <p class="section-sub">4 pasos simples para tener el dinero en tu billetera</p>
+      <p class="section-sub">6 fases de verificación para garantizarte el mejor préstamo</p>
       <div class="steps">
-        <div class="step"><div class="step-num">1</div><h3>Regístrate</h3><p>Crea tu cuenta con tus datos básicos en menos de 2 minutos.</p></div>
-        <div class="step"><div class="step-num">2</div><h3>Llena el formulario</h3><p>Completa tu información personal, laboral y el monto deseado.</p></div>
-        <div class="step"><div class="step-num">3</div><h3>Evaluación IA</h3><p>Nuestro sistema analiza tu perfil y genera un score crediticio al instante.</p></div>
-        <div class="step"><div class="step-num">4</div><h3>Recibe fondos</h3><p>Si eres aprobado, el monto se acredita inmediatamente en tu billetera virtual.</p></div>
+        <div class="step"><div class="step-num">1</div><h3>Datos Personales</h3><p>Verifica tu identidad, edad y dirección residencial.</p></div>
+        <div class="step"><div class="step-num">2</div><h3>Perfil Financiero</h3><p>Declara ingresos, deudas, empleo y referencias.</p></div>
+        <div class="step"><div class="step-num">3</div><h3>Configura el Préstamo</h3><p>Elige monto, plazo, moneda y sistema de amortización.</p></div>
+        <div class="step"><div class="step-num">4</div><h3>Evaluación IA</h3><p>6 fases de verificación en tiempo real generan tu Score FJAP.</p></div>
       </div>
     </div>
   </section>
@@ -198,7 +198,7 @@
       <div class="page-header">
         <div>
           <div class="page-title"><span class="icon">✦</span> Solicitud de Préstamo</div>
-          <div class="page-subtitle">Evaluación inteligente en segundos</div>
+          <div class="page-subtitle">Sistema de evaluación multicapa FJAP</div>
         </div>
       </div>
 
@@ -213,41 +213,126 @@
         <div id="sdot-4" class="step-dot pending">4</div>
       </div>
 
-      <div class="card" style="max-width:700px;margin:0 auto">
+      <div class="card" style="max-width:720px;margin:0 auto">
 
         <!-- STEP 1: Personal -->
         <div id="spanel-1" class="step-panel active">
           <h3>1. Datos Personales</h3>
+          <p class="step-desc">Todos los campos son requeridos. La información debe ser verídica y comprobable.</p>
           <div class="form-grid">
-            <div class="field"><label>Fecha de Nacimiento</label><input id="f-birthDate" type="date" /></div>
-            <div class="field"><label>Estado Civil</label>
+            <div class="field">
+              <label>Fecha de Nacimiento <span class="required-mark">*</span></label>
+              <input id="f-birthDate" type="date" />
+              <span class="field-hint">Debes tener entre 18 y 70 años</span>
+            </div>
+            <div class="field">
+              <label>Estado Civil <span class="required-mark">*</span></label>
               <select id="f-marital">
                 <option value="single">Soltero/a</option>
                 <option value="married">Casado/a</option>
                 <option value="divorced">Divorciado/a</option>
+                <option value="widowed">Viudo/a</option>
               </select>
             </div>
-            <div class="field" style="grid-column:1/-1"><label>Dirección Residencial</label><input id="f-address" type="text" placeholder="Calle Principal 123..." /></div>
-            <div class="field"><label>Número de Dependientes</label><input id="f-dependents" type="number" value="0" min="0" /></div>
+            <div class="field">
+              <label>Cédula / Documento de Identidad <span class="required-mark">*</span></label>
+              <input id="f-cedula" type="text" placeholder="00100000000" maxlength="11"
+                oninput="this.value=this.value.replace(/\D/g,'')" />
+              <span class="field-hint">Solo números · Máximo 11 dígitos</span>
+            </div>
+            <div class="field">
+              <label>Número de Dependientes <span class="required-mark">*</span></label>
+              <input id="f-dependents" type="number" value="0" min="0" max="20" />
+              <span class="field-hint">Personas a tu cargo económicamente</span>
+            </div>
+            <div class="field" style="grid-column:1/-1">
+              <label>Dirección Residencial Completa <span class="required-mark">*</span></label>
+              <input id="f-address" type="text" placeholder="Ej: Calle Principal 123, Sector Los Jardines, Santiago" />
+              <span class="field-hint">Incluye calle, número, sector y ciudad</span>
+            </div>
+          </div>
+          <div class="step-info-box">
+            <span class="sib-icon">🔒</span>
+            <span>Tu información personal es tratada con <strong>confidencialidad total</strong> y encriptación de nivel bancario.</span>
           </div>
         </div>
 
         <!-- STEP 2: Financial -->
         <div id="spanel-2" class="step-panel">
-          <h3>2. Datos Financieros</h3>
+          <h3>2. Perfil Financiero y Laboral</h3>
+          <p class="step-desc">Esta información determinará tu capacidad de pago y elegibilidad. Sé preciso — los datos son verificados.</p>
+
+          <div class="form-section-label">💰 Información Económica</div>
           <div class="form-grid">
-            <div class="field"><label>Ingreso Mensual</label><input id="f-income" type="number" placeholder="2000" /></div>
-            <div class="field"><label>Deuda Mensual Actual</label><input id="f-debt" type="number" placeholder="500" value="0" /></div>
-            <div class="field"><label>Empresa / Empleador</label><input id="f-employer" type="text" placeholder="Nombre de empresa" /></div>
-            <div class="field"><label>Años en el Empleo</label><input id="f-empyears" type="number" placeholder="2" min="0" /></div>
-            <div class="field" style="grid-column:1/-1"><label>Nombre Referencia Personal</label><input id="f-ref1name" type="text" placeholder="Familiar o amigo" /></div>
-            <div class="field" style="grid-column:1/-1"><label>Teléfono Referencia</label><input id="f-ref1phone" type="tel" placeholder="+1..." /></div>
+            <div class="field">
+              <label>Ingreso Mensual Neto <span class="required-mark">*</span></label>
+              <input id="f-income" type="number" placeholder="Ej: 2500" min="0" />
+              <span class="field-hint">Ingreso mínimo requerido: $500/mes</span>
+            </div>
+            <div class="field">
+              <label>Deuda Mensual Total Actual</label>
+              <input id="f-debt" type="number" placeholder="0" value="0" min="0" />
+              <span class="field-hint">Suma de todas tus deudas actuales</span>
+            </div>
+          </div>
+
+          <div class="form-section-label" style="margin-top:20px">💼 Información Laboral</div>
+          <div class="form-grid">
+            <div class="field">
+              <label>Tipo de Ocupación <span class="required-mark">*</span></label>
+              <select id="f-occupation">
+                <option value="empleado">Empleado/a (dependiente)</option>
+                <option value="independiente">Trabajador Independiente</option>
+                <option value="empresario">Empresario / Dueño</option>
+                <option value="jubilado">Jubilado / Pensionado</option>
+                <option value="otro">Otro</option>
+              </select>
+            </div>
+            <div class="field">
+              <label>Años en el Empleo Actual <span class="required-mark">*</span></label>
+              <input id="f-empyears" type="number" placeholder="Ej: 3" min="0" step="0.5" />
+              <span class="field-hint">Puede usar decimales (ej: 0.5 = 6 meses)</span>
+            </div>
+            <div class="field" style="grid-column:1/-1">
+              <label>Empresa / Empleador <span class="required-mark">*</span></label>
+              <input id="f-employer" type="text" placeholder="Nombre de la empresa u organización" />
+            </div>
+          </div>
+
+          <div class="form-section-label" style="margin-top:20px">👥 Referencias Personales <span style="font-weight:400;color:var(--text3)">(se requieren dos)</span></div>
+          <div class="form-grid">
+            <div class="field">
+              <label>Nombre Referencia 1 <span class="required-mark">*</span></label>
+              <input id="f-ref1name" type="text" placeholder="Nombre completo (familiar o amigo)" />
+            </div>
+            <div class="field">
+              <label>Teléfono Referencia 1 <span class="required-mark">*</span></label>
+              <input id="f-ref1phone" type="tel" placeholder="8090000000" maxlength="10"
+                oninput="this.value=this.value.replace(/\D/g,'')" />
+              <span class="field-hint">Solo números · Máximo 10 dígitos</span>
+            </div>
+            <div class="field">
+              <label>Nombre Referencia 2 <span class="required-mark">*</span></label>
+              <input id="f-ref2name" type="text" placeholder="Nombre completo (distinta a la 1)" />
+            </div>
+            <div class="field">
+              <label>Teléfono Referencia 2 <span class="required-mark">*</span></label>
+              <input id="f-ref2phone" type="tel" placeholder="8090000000" maxlength="10"
+                oninput="this.value=this.value.replace(/\D/g,'')" />
+              <span class="field-hint">Solo números · Máximo 10 dígitos</span>
+            </div>
+          </div>
+
+          <div class="step-info-box warning-box" style="margin-top:20px">
+            <span class="sib-icon">⚠</span>
+            <span>Proporcionar información <strong>falsa o inexacta</strong> resulta en rechazo automático y bloqueo de la cuenta.</span>
           </div>
         </div>
 
         <!-- STEP 3: Loan Config -->
         <div id="spanel-3" class="step-panel">
           <h3>3. Configura tu Préstamo</h3>
+          <p class="step-desc">Elige los parámetros de tu crédito. El sistema ajustará la tasa según tu perfil de riesgo.</p>
 
           <div style="margin-bottom:24px">
             <label style="font-size:13px;color:var(--text2);font-weight:500;display:block;margin-bottom:10px">Moneda del Préstamo</label>
@@ -263,11 +348,13 @@
           </div>
 
           <div class="form-grid" style="margin-top:20px">
-            <div class="field"><label>Plazo: <span id="term-val">12</span> meses</label>
+            <div class="field">
+              <label>Plazo: <span id="term-val">12</span> meses</label>
               <input type="range" id="term-slider" min="1" max="60" step="1" value="12" style="margin-top:8px" />
               <div class="range-labels"><span>1 mes</span><span>60 meses</span></div>
             </div>
-            <div class="field"><label>Propósito del Préstamo</label>
+            <div class="field">
+              <label>Propósito del Préstamo</label>
               <select id="sel-purpose">
                 <option value="negocio">Inversión Negocio</option>
                 <option value="vehiculo">Vehículo</option>
@@ -276,14 +363,16 @@
                 <option value="otros" selected>Otros</option>
               </select>
             </div>
-            <div class="field"><label>Frecuencia de Pago</label>
+            <div class="field">
+              <label>Frecuencia de Pago</label>
               <select id="sel-payment">
                 <option value="monthly" selected>Mensual</option>
                 <option value="biweekly">Quincenal</option>
                 <option value="weekly">Semanal</option>
               </select>
             </div>
-            <div class="field"><label>Sistema de Amortización</label>
+            <div class="field">
+              <label>Sistema de Amortización</label>
               <select id="sel-amort">
                 <option value="french" selected>Francés (Cuota Fija)</option>
                 <option value="german">Alemán (Capital Fijo)</option>
@@ -291,27 +380,50 @@
               </select>
             </div>
           </div>
+
+          <!-- Rate preview -->
+          <div class="rate-preview-box">
+            <div class="rpb-title">📊 Tasas de Interés según Perfil de Riesgo</div>
+            <div class="rpb-grid">
+              <div class="rpb-item tier-aaa"><span class="rpb-tier">Tier AAA</span><span class="rpb-rate">11.5%</span><span class="rpb-desc">Score 800+</span></div>
+              <div class="rpb-item tier-aa"> <span class="rpb-tier">Tier AA</span> <span class="rpb-rate">13.5%</span><span class="rpb-desc">Score 720+</span></div>
+              <div class="rpb-item tier-a">  <span class="rpb-tier">Tier A</span>  <span class="rpb-rate">16.0%</span><span class="rpb-desc">Score 650+</span></div>
+              <div class="rpb-item tier-b">  <span class="rpb-tier">Tier B</span>  <span class="rpb-rate">21.0%</span><span class="rpb-desc">Score 570+</span></div>
+              <div class="rpb-item tier-c">  <span class="rpb-tier">Tier C</span>  <span class="rpb-rate">26.0%</span><span class="rpb-desc">Score 550+</span></div>
+            </div>
+            <p class="rpb-note">La tasa final se asigna automáticamente según tu Score FJAP en la evaluación.</p>
+          </div>
         </div>
 
-        <!-- STEP 4: AI Scoring -->
+        <!-- ═══════════════════════════════════════════════════ -->
+        <!-- STEP 4: MULTI-PHASE VERIFICATION (COMPLETELY NEW)  -->
+        <!-- ═══════════════════════════════════════════════════ -->
         <div id="spanel-4" class="step-panel">
-          <div id="scoring-loader" class="scoring-loader hidden">
-            <div class="spin-ring"></div>
-            <h3 style="font-size:22px;font-weight:800">Motor de IA Analizando...</h3>
-            <p style="color:var(--text2)">Consultando perfil, ingresos y variables predictivas</p>
-          </div>
-          <div id="score-result" class="score-result hidden">
-            <h3 id="score-pretitle" style="font-size:26px;font-weight:900">¡Préstamo Pre-Aprobado!</h3>
-            <div class="score-circle">
-              <div class="score-num" id="score-num">785</div>
-              <div class="score-level" id="score-lbl">Excelente</div>
+
+          <!-- Header -->
+          <div class="verify-header">
+            <div class="verify-spinner-wrap" id="verify-spinner-wrap">
+              <div class="spin-ring"></div>
             </div>
-            <div class="score-box">
-              <p style="color:var(--text2);font-size:14px;margin-bottom:4px">Score FJAP</p>
-              <p style="font-size:13px;color:var(--text3)">Tu préstamo está listo. Confirma para recibir los fondos en tu billetera.</p>
+            <h3 class="verify-title" id="verify-title">Analizando tu Solicitud...</h3>
+            <p class="verify-subtitle" id="verify-subtitle">Por favor no cierres esta ventana</p>
+            <div class="verify-tracking hidden" id="verify-tracking">
+              Expediente: <strong id="verify-code">—</strong>
             </div>
           </div>
+
+          <!-- Phase list -->
+          <div class="verify-phases-list" id="verify-phases-list">
+            <!-- Filled dynamically by JS -->
+          </div>
+
+          <!-- Final result -->
+          <div class="verify-result hidden" id="verify-result">
+            <!-- Filled dynamically by showVerificationResult() -->
+          </div>
+
         </div>
+        <!-- ═══════════════════════════════════════════════════ -->
 
         <!-- Navigation buttons -->
         <div style="display:flex;justify-content:space-between;margin-top:32px;padding-top:20px;border-top:1px solid var(--border)">
