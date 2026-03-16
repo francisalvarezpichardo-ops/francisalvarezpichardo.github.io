@@ -237,8 +237,8 @@
             <div class="field">
               <label>Cédula / Documento de Identidad <span class="required-mark">*</span></label>
               <input id="f-cedula" type="text" placeholder="00100000000" maxlength="11"
-                oninput="this.value=this.value.replace(/\D/g,'')" />
-              <span class="field-hint">Solo números · Máximo 11 dígitos</span>
+                oninput="this.value=this.value.replace(/\D/g,'').slice(0,11)" />
+              <span class="field-hint">Solo números · Exactamente 11 dígitos</span>
             </div>
             <div class="field">
               <label>Número de Dependientes <span class="required-mark">*</span></label>
@@ -307,9 +307,9 @@
             </div>
             <div class="field">
               <label>Teléfono Referencia 1 <span class="required-mark">*</span></label>
-              <input id="f-ref1phone" type="tel" placeholder="8090000000" maxlength="10"
-                oninput="this.value=this.value.replace(/\D/g,'')" />
-              <span class="field-hint">Solo números · Máximo 10 dígitos</span>
+              <input id="f-ref1phone" type="tel" placeholder="80900000000" maxlength="11"
+                oninput="this.value=this.value.replace(/\D/g,'').slice(0,11)" />
+              <span class="field-hint">Solo números · Exactamente 11 dígitos</span>
             </div>
             <div class="field">
               <label>Nombre Referencia 2 <span class="required-mark">*</span></label>
@@ -317,9 +317,9 @@
             </div>
             <div class="field">
               <label>Teléfono Referencia 2 <span class="required-mark">*</span></label>
-              <input id="f-ref2phone" type="tel" placeholder="8090000000" maxlength="10"
-                oninput="this.value=this.value.replace(/\D/g,'')" />
-              <span class="field-hint">Solo números · Máximo 10 dígitos</span>
+              <input id="f-ref2phone" type="tel" placeholder="80900000000" maxlength="11"
+                oninput="this.value=this.value.replace(/\D/g,'').slice(0,11)" />
+              <span class="field-hint">Solo números · Exactamente 11 dígitos</span>
             </div>
           </div>
 

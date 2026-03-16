@@ -573,9 +573,8 @@ function validateStep1() {
   if (isNaN(age) || age < 18) return 'Debes tener al menos 18 años para solicitar un préstamo.';
   if (age > 70) return 'La edad máxima permitida es 70 años.';
 
-  if (!cedula)         return 'La cédula / documento de identidad es requerido.';
-  if (cedula.length < 6)  return 'La cédula debe tener al menos 6 dígitos.';
-  if (cedula.length > 11) return 'La cédula no puede superar los 11 dígitos.';
+  if (!cedula)              return 'La cédula / documento de identidad es requerido.';
+  if (cedula.length !== 11) return 'La cédula debe tener exactamente 11 dígitos.';
 
   if (address.length < 5) return 'La dirección residencial completa es requerida (mínimo 5 caracteres).';
   return null;
@@ -599,15 +598,13 @@ function validateStep2() {
   if (empYears === '' || empYears === null || empYears === undefined) return 'Los años de empleo son requeridos.';
   if (+empYears < 0)          return 'Los años de empleo no pueden ser negativos.';
 
-  if (ref1name.length < 3)    return 'El nombre de la Referencia Personal 1 es requerido.';
-  if (!ref1phone)             return 'El teléfono de la Referencia Personal 1 es requerido.';
-  if (ref1phone.length < 7)   return 'El teléfono de la Referencia 1 debe tener al menos 7 dígitos.';
-  if (ref1phone.length > 10)  return 'El teléfono de la Referencia 1 no puede superar los 10 dígitos.';
+  if (ref1name.length < 3)      return 'El nombre de la Referencia Personal 1 es requerido.';
+  if (!ref1phone)               return 'El teléfono de la Referencia Personal 1 es requerido.';
+  if (ref1phone.length !== 11)  return 'El teléfono de la Referencia 1 debe tener exactamente 11 dígitos.';
 
-  if (ref2name.length < 3)    return 'El nombre de la Referencia Personal 2 es requerido.';
-  if (!ref2phone)             return 'El teléfono de la Referencia Personal 2 es requerido.';
-  if (ref2phone.length < 7)   return 'El teléfono de la Referencia 2 debe tener al menos 7 dígitos.';
-  if (ref2phone.length > 10)  return 'El teléfono de la Referencia 2 no puede superar los 10 dígitos.';
+  if (ref2name.length < 3)      return 'El nombre de la Referencia Personal 2 es requerido.';
+  if (!ref2phone)               return 'El teléfono de la Referencia Personal 2 es requerido.';
+  if (ref2phone.length !== 11)  return 'El teléfono de la Referencia 2 debe tener exactamente 11 dígitos.';
 
   return null;
 }
