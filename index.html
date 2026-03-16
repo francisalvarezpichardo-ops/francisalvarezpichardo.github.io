@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FJAP Préstamos Personales</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<div id="global-alert" class="hidden"></div>
+
+<!-- ══════════════ LANDING NAV ══════════════ -->
+<nav id="landing-nav">
+  <div class="logo">FJAP <span>App</span></div>
+  <div class="nav-links">
+    <a href="#features" class="btn btn-ghost btn-sm">Características</a>
+    <a href="#como-funciona" class="btn btn-ghost btn-sm">Cómo Funciona</a>
+    <button class="btn btn-ghost btn-sm" onclick="openAuth('login')">Iniciar Sesión</button>
+    <button class="btn btn-gold btn-sm" onclick="openAuth('register')">Registrarme</button>
+  </div>
+</nav>
+
+<!-- ══════════════ LANDING PAGE ══════════════ -->
+<div id="landing">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div>
+      <div class="badge badge-amber" style="margin:0 auto 20px;display:inline-flex">✦ Préstamos con IA · Aprobación en Segundos</div>
+      <h1>Tu préstamo personal<br><span class="gold">sin complicaciones</span></h1>
+      <p>Evaluación de crédito inteligente, billetera virtual integrada y facturas digitales. El futuro de los préstamos personales.</p>
+      <div class="hero-btns">
+        <button class="btn btn-gold btn-lg" onclick="openAuth('register')">✦ Solicitar Préstamo</button>
+        <button class="btn btn-ghost btn-lg" onclick="openAuth('login')">Iniciar Sesión</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="section" id="features">
+    <p class="badge badge-amber" style="display:inline-flex;margin:0 auto 12px">Características</p>
+    <h2 class="section-title">Todo lo que necesitas<br>en <span class="gold">un solo lugar</span></h2>
+    <p class="section-sub">Una plataforma completa para gestionar tus préstamos personales</p>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feat-icon">🤖</div>
+        <h3>Score IA Instantáneo</h3>
+        <p>Nuestro motor analiza más de 15 variables en tiempo real para darte una decisión en segundos con total transparencia.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feat-icon">👛</div>
+        <h3>Billetera Virtual</h3>
+        <p>Recibe tu préstamo directamente en tu billetera digital. Deposita, retira y transfiere fondos con un solo clic.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feat-icon">🌍</div>
+        <h3>Multi-Moneda</h3>
+        <p>Solicita tu préstamo en USD, DOP, EUR, MXN, COP y 5 monedas más. Sin conversiones, sin sorpresas.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feat-icon">🧾</div>
+        <h3>Factura Digital</h3>
+        <p>Cada préstamo genera una factura digital completa lista para imprimir o guardar como PDF.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feat-icon">📊</div>
+        <h3>Tabla de Amortización</h3>
+        <p>Visualiza cada cuota detallada: capital, interés y saldo. Tres sistemas: Francés, Alemán y Americano.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feat-icon">🔒</div>
+        <h3>100% Seguro</h3>
+        <p>Tus datos protegidos con encriptación de nivel bancario y autenticación segura en cada sesión.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cómo funciona -->
+  <section class="section" id="como-funciona" style="background:rgba(255,255,255,0.01);border-top:1px solid var(--border);border-bottom:1px solid var(--border);max-width:100%;padding-left:0;padding-right:0">
+    <div style="max-width:1100px;margin:0 auto;padding:0 24px">
+      <h2 class="section-title">¿Cómo funciona?</h2>
+      <p class="section-sub">4 pasos simples para tener el dinero en tu billetera</p>
+      <div class="steps">
+        <div class="step"><div class="step-num">1</div><h3>Regístrate</h3><p>Crea tu cuenta con tus datos básicos en menos de 2 minutos.</p></div>
+        <div class="step"><div class="step-num">2</div><h3>Llena el formulario</h3><p>Completa tu información personal, laboral y el monto deseado.</p></div>
+        <div class="step"><div class="step-num">3</div><h3>Evaluación IA</h3><p>Nuestro sistema analiza tu perfil y genera un score crediticio al instante.</p></div>
+        <div class="step"><div class="step-num">4</div><h3>Recibe fondos</h3><p>Si eres aprobado, el monto se acredita inmediatamente en tu billetera virtual.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="cta-section">
+    <h2>¿Listo para obtener tu préstamo?</h2>
+    <p>Únete a miles de personas que ya obtuvieron su financiamiento con FJAP Préstamos</p>
+    <button class="btn btn-gold btn-lg" onclick="openAuth('register')">✦ Empezar Ahora — Es Gratis</button>
+  </div>
+
+  <footer>
+    <div class="logo">FJAP <span>App</span></div>
+    <p>© 2025 FJAP Préstamos Personales · Todos los derechos reservados</p>
+  </footer>
+</div>
+
+<!-- ══════════════ AUTH MODAL ══════════════ -->
+<div id="auth-overlay" class="modal-overlay hidden" onclick="closeAuth(event)">
+  <div class="modal" onclick="event.stopPropagation()">
+    <h2>FJAP <span class="gold">Préstamos</span></h2>
+    <p class="sub">Accede a tu cuenta o crea una nueva</p>
+    <div class="modal-tabs">
+      <button class="modal-tab active" id="tab-login" onclick="switchAuthTab('login')">Iniciar Sesión</button>
+      <button class="modal-tab" id="tab-register" onclick="switchAuthTab('register')">Registrarme</button>
+    </div>
+    <div id="auth-err" class="alert alert-error" style="display:none"></div>
+    <style>#auth-err:not(:empty){display:block!important}</style>
+
+    <!-- Login -->
+    <div id="form-login" class="modal-form">
+      <div class="field"><label>Email</label><input id="l-email" type="email" placeholder="tu@email.com" /></div>
+      <div class="field"><label>Contraseña</label><input id="l-pass" type="password" placeholder="••••••••" onkeydown="if(event.key==='Enter')doLogin()" /></div>
+      <button class="btn btn-gold btn-full" onclick="doLogin()">Iniciar Sesión</button>
+      <p class="modal-toggle">¿No tienes cuenta? <a onclick="switchAuthTab('register')">Regístrate aquí</a></p>
+    </div>
+
+    <!-- Register -->
+    <div id="form-register" class="modal-form hidden">
+      <div class="form-grid">
+        <div class="field" style="grid-column:1/-1"><label>Nombre Completo</label><input id="r-name" type="text" placeholder="Juan Pérez" /></div>
+        <div class="field"><label>Email</label><input id="r-email" type="email" placeholder="tu@email.com" /></div>
+        <div class="field"><label>Contraseña</label><input id="r-pass" type="password" placeholder="Mínimo 6 caracteres" /></div>
+        <div class="field"><label>Teléfono</label><input id="r-phone" type="tel" placeholder="+1 809 000 0000" /></div>
+        <div class="field"><label>Cédula / ID</label><input id="r-cedula" type="text" placeholder="001-0000000-0" /></div>
+      </div>
+      <button class="btn btn-gold btn-full" onclick="doRegister()">Crear Cuenta</button>
+      <p class="modal-toggle">¿Ya tienes cuenta? <a onclick="switchAuthTab('login')">Inicia sesión</a></p>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ APP SHELL ══════════════ -->
+<div id="app" class="hidden">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-logo"><div class="logo">FJAP <span>App</span></div></div>
+    <div class="sidebar-user"><div id="sidebar-user-info"></div></div>
+    <nav class="sidebar-nav">
+      <button class="nav-item active" data-page="home"><span class="nav-icon">🏠</span><span>Resumen</span></button>
+      <button class="nav-item" data-page="loans"><span class="nav-icon">💳</span><span>Mis Préstamos</span></button>
+      <button class="nav-item" data-page="apply"><span class="nav-icon">✦</span><span>Nuevo Préstamo</span></button>
+      <button class="nav-item" data-page="wallet"><span class="nav-icon">👛</span><span>Billetera Virtual</span></button>
+    </nav>
+    <div class="sidebar-bottom">
+      <button class="nav-item btn-danger" data-page="logout"><span class="nav-icon">↩</span><span>Cerrar Sesión</span></button>
+    </div>
+  </aside>
+
+  <main class="main">
+
+    <!-- ── HOME PAGE ── -->
+    <div id="page-home" class="app-page">
+      <div class="page-header">
+        <div>
+          <div class="page-title"><span class="icon">🏠</span> Resumen</div>
+          <div class="page-subtitle">Bienvenido a tu panel de control</div>
+        </div>
+        <button class="btn btn-gold" id="btn-apply-nav"><span>✦</span> Nuevo Préstamo</button>
+      </div>
+      <div class="stat-grid">
+        <div class="stat-card"><div class="label">Balance Billetera</div><div class="value" id="stat-balance">—</div><div class="sub">Disponible</div></div>
+        <div class="stat-card"><div class="label">Total Préstamos</div><div class="value" id="stat-loans">0</div><div class="sub">Historial</div></div>
+        <div class="stat-card"><div class="label">Préstamos Activos</div><div class="value" id="stat-active">0</div><div class="sub">En curso</div></div>
+        <div class="stat-card"><div class="label">Score FJAP</div><div class="value" id="stat-score">—</div><div class="sub">Perfil crediticio</div></div>
+      </div>
+      <div class="card">
+        <h3 style="font-size:16px;font-weight:700;margin-bottom:20px">📋 Préstamos Recientes</h3>
+        <div id="recent-loans" class="loans-grid"></div>
+      </div>
+    </div>
+
+    <!-- ── LOANS PAGE ── -->
+    <div id="page-loans" class="app-page hidden">
+      <div class="page-header">
+        <div>
+          <div class="page-title"><span class="icon">💳</span> Mis Préstamos</div>
+          <div class="page-subtitle">Historial y estado de tus créditos</div>
+        </div>
+        <button class="btn btn-gold" onclick="showPage('apply');initApplyForm()">✦ Nuevo Préstamo</button>
+      </div>
+      <div class="loans-grid" id="loans-grid"></div>
+    </div>
+
+    <!-- ── APPLY PAGE ── -->
+    <div id="page-apply" class="app-page hidden">
+      <div class="page-header">
+        <div>
+          <div class="page-title"><span class="icon">✦</span> Solicitud de Préstamo</div>
+          <div class="page-subtitle">Evaluación inteligente en segundos</div>
+        </div>
+      </div>
+
+      <!-- Step indicator -->
+      <div class="steps-indicator">
+        <div id="sdot-1" class="step-dot current">1</div>
+        <div id="sline-1" class="step-line pending"></div>
+        <div id="sdot-2" class="step-dot pending">2</div>
+        <div id="sline-2" class="step-line pending"></div>
+        <div id="sdot-3" class="step-dot pending">3</div>
+        <div id="sline-3" class="step-line pending"></div>
+        <div id="sdot-4" class="step-dot pending">4</div>
+      </div>
+
+      <div class="card" style="max-width:700px;margin:0 auto">
+
+        <!-- STEP 1: Personal -->
+        <div id="spanel-1" class="step-panel active">
+          <h3>1. Datos Personales</h3>
+          <div class="form-grid">
+            <div class="field"><label>Fecha de Nacimiento</label><input id="f-birthDate" type="date" /></div>
+            <div class="field"><label>Estado Civil</label>
+              <select id="f-marital">
+                <option value="single">Soltero/a</option>
+                <option value="married">Casado/a</option>
+                <option value="divorced">Divorciado/a</option>
+              </select>
+            </div>
+            <div class="field" style="grid-column:1/-1"><label>Dirección Residencial</label><input id="f-address" type="text" placeholder="Calle Principal 123..." /></div>
+            <div class="field"><label>Número de Dependientes</label><input id="f-dependents" type="number" value="0" min="0" /></div>
+          </div>
+        </div>
+
+        <!-- STEP 2: Financial -->
+        <div id="spanel-2" class="step-panel">
+          <h3>2. Datos Financieros</h3>
+          <div class="form-grid">
+            <div class="field"><label>Ingreso Mensual</label><input id="f-income" type="number" placeholder="2000" /></div>
+            <div class="field"><label>Deuda Mensual Actual</label><input id="f-debt" type="number" placeholder="500" value="0" /></div>
+            <div class="field"><label>Empresa / Empleador</label><input id="f-employer" type="text" placeholder="Nombre de empresa" /></div>
+            <div class="field"><label>Años en el Empleo</label><input id="f-empyears" type="number" placeholder="2" min="0" /></div>
+            <div class="field" style="grid-column:1/-1"><label>Nombre Referencia Personal</label><input id="f-ref1name" type="text" placeholder="Familiar o amigo" /></div>
+            <div class="field" style="grid-column:1/-1"><label>Teléfono Referencia</label><input id="f-ref1phone" type="tel" placeholder="+1..." /></div>
+          </div>
+        </div>
+
+        <!-- STEP 3: Loan Config -->
+        <div id="spanel-3" class="step-panel">
+          <h3>3. Configura tu Préstamo</h3>
+
+          <div style="margin-bottom:24px">
+            <label style="font-size:13px;color:var(--text2);font-weight:500;display:block;margin-bottom:10px">Moneda del Préstamo</label>
+            <div class="currency-grid" id="currency-grid"></div>
+            <div class="currency-label" id="currency-label"></div>
+          </div>
+
+          <div class="amount-display">
+            <div style="font-size:13px;color:var(--text2);margin-bottom:8px">Monto Solicitado</div>
+            <div class="amount-big" id="amount-big"><span class="amount-sym">$</span>5,000</div>
+            <input type="range" id="amt-slider" min="100" max="50000" step="100" value="5000" style="margin-top:20px" />
+            <div class="range-labels"><span id="range-min">$100</span><span id="range-max">$50,000</span></div>
+          </div>
+
+          <div class="form-grid" style="margin-top:20px">
+            <div class="field"><label>Plazo: <span id="term-val">12</span> meses</label>
+              <input type="range" id="term-slider" min="1" max="60" step="1" value="12" style="margin-top:8px" />
+              <div class="range-labels"><span>1 mes</span><span>60 meses</span></div>
+            </div>
+            <div class="field"><label>Propósito del Préstamo</label>
+              <select id="sel-purpose">
+                <option value="negocio">Inversión Negocio</option>
+                <option value="vehiculo">Vehículo</option>
+                <option value="hogar">Remodelación Hogar</option>
+                <option value="deudas">Consolidar Deudas</option>
+                <option value="otros" selected>Otros</option>
+              </select>
+            </div>
+            <div class="field"><label>Frecuencia de Pago</label>
+              <select id="sel-payment">
+                <option value="monthly" selected>Mensual</option>
+                <option value="biweekly">Quincenal</option>
+                <option value="weekly">Semanal</option>
+              </select>
+            </div>
+            <div class="field"><label>Sistema de Amortización</label>
+              <select id="sel-amort">
+                <option value="french" selected>Francés (Cuota Fija)</option>
+                <option value="german">Alemán (Capital Fijo)</option>
+                <option value="american">Americano</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 4: AI Scoring -->
+        <div id="spanel-4" class="step-panel">
+          <div id="scoring-loader" class="scoring-loader hidden">
+            <div class="spin-ring"></div>
+            <h3 style="font-size:22px;font-weight:800">Motor de IA Analizando...</h3>
+            <p style="color:var(--text2)">Consultando perfil, ingresos y variables predictivas</p>
+          </div>
+          <div id="score-result" class="score-result hidden">
+            <h3 id="score-pretitle" style="font-size:26px;font-weight:900">¡Préstamo Pre-Aprobado!</h3>
+            <div class="score-circle">
+              <div class="score-num" id="score-num">785</div>
+              <div class="score-level" id="score-lbl">Excelente</div>
+            </div>
+            <div class="score-box">
+              <p style="color:var(--text2);font-size:14px;margin-bottom:4px">Score FJAP</p>
+              <p style="font-size:13px;color:var(--text3)">Tu préstamo está listo. Confirma para recibir los fondos en tu billetera.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Navigation buttons -->
+        <div style="display:flex;justify-content:space-between;margin-top:32px;padding-top:20px;border-top:1px solid var(--border)">
+          <button id="btn-back" class="btn btn-ghost" onclick="applyBack()" style="display:none">← Atrás</button>
+          <div style="flex:1"></div>
+          <button id="btn-next" class="btn btn-gold" onclick="applyNext()">Continuar →</button>
+          <button id="btn-submit" class="btn btn-gold" onclick="submitLoan()" style="display:none">✅ Confirmar y Recibir Fondos</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── LOAN DETAIL PAGE ── -->
+    <div id="page-loan-detail" class="app-page hidden"></div>
+
+    <!-- ── WALLET PAGE ── -->
+    <div id="page-wallet" class="app-page hidden">
+      <div class="page-header">
+        <div>
+          <div class="page-title"><span class="icon">👛</span> Billetera Virtual</div>
+          <div class="page-subtitle">Gestiona tus fondos</div>
+        </div>
+      </div>
+
+      <div class="wallet-hero">
+        <div>
+          <div class="wallet-balance-label">Saldo Disponible</div>
+          <div class="wallet-balance" id="wallet-balance">$0.00</div>
+          <div style="color:var(--text2);font-size:13px;margin-top:4px" id="wallet-currency">🇺🇸 USD</div>
+        </div>
+        <div class="wallet-actions">
+          <button class="btn btn-gold" onclick="openWalletModal('deposit')">⬇ Depositar</button>
+          <button class="btn btn-ghost" onclick="openWalletModal('withdraw')">⬆ Retirar</button>
+          <button class="btn btn-outline" onclick="openWalletModal('transfer')">↔ Transferir</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3 style="font-size:16px;font-weight:700;margin-bottom:20px">📜 Historial de Movimientos</h3>
+        <div class="tx-list" id="tx-list"></div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<!-- ══════════════ WALLET MODAL ══════════════ -->
+<div id="wallet-modal-overlay" class="modal-overlay hidden" onclick="if(event.target===this)closeWalletModal()">
+  <div class="wallet-modal" onclick="event.stopPropagation()">
+    <h3 id="wallet-modal-title">Operación</h3>
+    <div id="wallet-modal-err" style="color:#f87171;font-size:13px;margin-bottom:10px"></div>
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <div class="field"><label>Monto</label><input id="wallet-amount-input" type="number" placeholder="0.00" /></div>
+      <div id="wallet-transfer-row" class="field" style="display:none"><label>Email del destinatario</label><input id="wallet-recipient" type="email" placeholder="destinatario@email.com" /></div>
+      <div class="field"><label>Descripción (opcional)</label><input id="wallet-desc-input" type="text" placeholder="Descripción..." /></div>
+      <div style="display:flex;gap:10px">
+        <button class="btn btn-ghost btn-full" onclick="closeWalletModal()">Cancelar</button>
+        <button class="btn btn-gold btn-full" onclick="submitWalletOp()">Confirmar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ INVOICE MODAL ══════════════ -->
+<div id="invoice-overlay" class="modal-overlay hidden" onclick="if(event.target===this)closeInvoice()">
+  <div class="invoice-modal" onclick="event.stopPropagation()">
+    <div class="invoice-bar">
+      <h3>🧾 Factura Digital</h3>
+      <div class="invoice-bar-right">
+        <button class="btn btn-gold btn-sm" onclick="printInvoice()">🖨 Imprimir / PDF</button>
+        <button class="btn btn-ghost btn-sm" onclick="closeInvoice()">✕</button>
+      </div>
+    </div>
+    <div class="inv-body" id="invoice-body"></div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
