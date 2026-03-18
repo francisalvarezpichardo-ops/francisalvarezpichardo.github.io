@@ -1,16 +1,23 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
   <title>FJAP Préstamos Personales</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
 </head>
 <body>
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/18095550000" class="whatsapp-fab" target="_blank" title="Ayuda por WhatsApp">
+  <span class="wfab-icon">💬</span><span class="wfab-label">Ayuda</span>
+</a>
+
 <div id="global-alert" class="hidden"></div>
 
+<!-- LANDING NAV -->
 <nav id="landing-nav">
   <div class="logo">FJAP <span>App</span></div>
   <div class="nav-links">
@@ -21,12 +28,13 @@
   </div>
 </nav>
 
+<!-- LANDING -->
 <div id="landing">
   <section class="hero">
     <div>
       <div class="badge badge-amber" style="margin:0 auto 20px;display:inline-flex">✦ Fintech Completa · IA · Pagos · Contabilidad</div>
-      <h1>Tu préstamo personal<br><span class="gold">sin complicaciones</span></h1>
-      <p>Sistema financiero completo: préstamos con IA, pagos con tarjeta, contabilidad integrada, módulo empresarial y chatbot financiero.</p>
+      <h1>Tu préstamo personal<br><span class="gold">100% digital</span></h1>
+      <p>Préstamos personales sin papeles. Evaluación IA, verificación facial, firma digital y desembolso instantáneo.</p>
       <div class="hero-btns">
         <button class="btn btn-gold btn-lg" onclick="openAuth('register')">✦ Solicitar Préstamo</button>
         <button class="btn btn-ghost btn-lg" onclick="openAuth('login')">Iniciar Sesión</button>
@@ -36,77 +44,303 @@
   <section class="section" id="features">
     <p class="badge badge-amber" style="display:inline-flex;margin:0 auto 12px">Características</p>
     <h2 class="section-title">Todo lo que necesitas<br>en <span class="gold">un solo lugar</span></h2>
-    <p class="section-sub">Plataforma fintech completa de nivel institucional</p>
+    <p class="section-sub">Plataforma fintech completa de nivel bancario</p>
     <div class="features-grid">
-      <div class="feature-card"><div class="feat-icon">🤖</div><h3>IA Avanzada</h3><p>Score automático, detección de fraude, chatbot financiero y análisis predictivo de morosidad.</p></div>
-      <div class="feature-card"><div class="feat-icon">💳</div><h3>Pagos con Tarjeta</h3><p>Depósitos, retiros y transferencias con tarjeta. Validación completa de 16 dígitos.</p></div>
-      <div class="feature-card"><div class="feat-icon">💰</div><h3>Pago de Préstamos</h3><p>Paga tus cuotas directamente desde el sistema con confirmación automática.</p></div>
-      <div class="feature-card"><div class="feat-icon">🏢</div><h3>Módulo Empresarial</h3><p>Cartera de clientes, cobradores, rutas de cobro, microcréditos y reportes.</p></div>
-      <div class="feature-card"><div class="feat-icon">📒</div><h3>Contabilidad Integrada</h3><p>Ingresos, intereses, balance financiero, estado de resultados y exportación CSV.</p></div>
-      <div class="feature-card"><div class="feat-icon">🔒</div><h3>Seguridad Multicapa</h3><p>6 fases de verificación, validación de tarjeta bancaria y anti-fraude.</p></div>
+      <div class="feature-card"><div class="feat-icon">🤖</div><h3>IA Avanzada</h3><p>Score automático, detección de fraude y análisis predictivo.</p></div>
+      <div class="feature-card"><div class="feat-icon">🪪</div><h3>Verificación Facial</h3><p>Reconocimiento facial guiado sin cámara para verificar tu identidad.</p></div>
+      <div class="feature-card"><div class="feat-icon">✍️</div><h3>Firma Digital</h3><p>Préstamo 100% sin papel. Acepta y firma digitalmente desde tu dispositivo.</p></div>
+      <div class="feature-card"><div class="feat-icon">💳</div><h3>Pagos con Tarjeta</h3><p>Deposita, retira y paga cuotas con tu tarjeta de crédito o débito.</p></div>
+      <div class="feature-card"><div class="feat-icon">🏢</div><h3>Módulo Empresarial</h3><p>Cartera, cobradores, rutas, microcréditos y control de morosidad.</p></div>
+      <div class="feature-card"><div class="feat-icon">📒</div><h3>Contabilidad Integrada</h3><p>Balance, ingresos, intereses y exportación contable automática.</p></div>
     </div>
   </section>
   <section class="section" id="como-funciona" style="background:rgba(255,255,255,0.01);border-top:1px solid var(--border);border-bottom:1px solid var(--border);max-width:100%;padding-left:0;padding-right:0">
     <div style="max-width:1100px;margin:0 auto;padding:0 24px">
       <h2 class="section-title">¿Cómo funciona?</h2>
-      <p class="section-sub">Fintech completa en 4 pasos</p>
+      <p class="section-sub">Préstamo sin papel en 5 pasos</p>
       <div class="steps">
-        <div class="step"><div class="step-num">1</div><h3>Regístrate</h3><p>Cuenta con cédula y teléfono verificados.</p></div>
-        <div class="step"><div class="step-num">2</div><h3>Solicita</h3><p>6 fases de IA generan tu Score FJAP.</p></div>
-        <div class="step"><div class="step-num">3</div><h3>Recibe</h3><p>Fondos acreditados en tu billetera.</p></div>
-        <div class="step"><div class="step-num">4</div><h3>Paga</h3><p>Cuotas con tarjeta desde la plataforma.</p></div>
+        <div class="step"><div class="step-num">1</div><h3>Regístrate</h3><p>Completa tus datos y verifica tu identidad con reconocimiento facial.</p></div>
+        <div class="step"><div class="step-num">2</div><h3>Solicita</h3><p>Ingresa tus datos financieros y configura tu préstamo.</p></div>
+        <div class="step"><div class="step-num">3</div><h3>Evaluación IA</h3><p>6 fases de análisis generan tu Score FJAP en segundos.</p></div>
+        <div class="step"><div class="step-num">4</div><h3>Firma Digital</h3><p>Acepta los términos y firma digitalmente desde tu dispositivo.</p></div>
+        <div class="step"><div class="step-num">5</div><h3>Recibe Fondos</h3><p>Desembolso inmediato a tu cuenta bancaria o billetera.</p></div>
       </div>
     </div>
   </section>
   <div class="cta-section">
     <h2>¿Listo para obtener tu préstamo?</h2>
-    <p>La plataforma fintech más completa de préstamos personales</p>
+    <p>La plataforma fintech más completa para ciudadanos dominicanos</p>
     <button class="btn btn-gold btn-lg" onclick="openAuth('register')">✦ Empezar Ahora</button>
   </div>
   <footer>
     <div class="logo">FJAP <span>App</span></div>
-    <p>© 2025 FJAP Préstamos Personales · Todos los derechos reservados</p>
+    <p>© 2025 FJAP Préstamos Personales · República Dominicana · Todos los derechos reservados</p>
   </footer>
 </div>
 
-<!-- AUTH MODAL -->
+<!-- ══════════════ AUTH MODAL (MULTI-STEP REGISTRATION) ══════════════ -->
 <div id="auth-overlay" class="modal-overlay hidden" onclick="closeAuth(event)">
-  <div class="modal" onclick="event.stopPropagation()">
+  <div class="modal modal-wide" onclick="event.stopPropagation()">
     <h2>FJAP <span class="gold">Préstamos</span></h2>
-    <p class="sub">Accede a tu cuenta o crea una nueva</p>
+    <p class="sub">Accede o crea tu cuenta verificada</p>
     <div class="modal-tabs">
       <button class="modal-tab active" id="tab-login" onclick="switchAuthTab('login')">Iniciar Sesión</button>
       <button class="modal-tab" id="tab-register" onclick="switchAuthTab('register')">Registrarme</button>
     </div>
     <div id="auth-err" class="alert alert-error" style="display:none"></div>
     <style>#auth-err:not(:empty){display:block!important}</style>
+
+    <!-- ── LOGIN ── -->
     <div id="form-login" class="modal-form">
-      <div class="field"><label>Email</label><input id="l-email" type="email" placeholder="tu@email.com" /></div>
-      <div class="field"><label>Contraseña</label><input id="l-pass" type="password" placeholder="••••••••" onkeydown="if(event.key==='Enter')doLogin()" /></div>
+      <div class="field"><label>Correo Electrónico</label><input id="l-email" type="email" placeholder="tucorreo@email.com"/></div>
+      <div class="field"><label>Contraseña</label><input id="l-pass" type="password" placeholder="••••••••" onkeydown="if(event.key==='Enter')doLogin()"/></div>
       <button class="btn btn-gold btn-full" id="btn-do-login" onclick="doLogin()">Iniciar Sesión</button>
       <p class="modal-toggle">¿No tienes cuenta? <a onclick="switchAuthTab('register')">Regístrate aquí</a></p>
     </div>
+
+    <!-- ── REGISTER MULTI-STEP ── -->
     <div id="form-register" class="modal-form hidden">
-      <div class="form-grid">
-        <div class="field" style="grid-column:1/-1"><label>Nombre Completo</label><input id="r-name" type="text" placeholder="Juan Pérez" /></div>
-        <div class="field"><label>Email</label><input id="r-email" type="email" placeholder="tu@email.com" /></div>
-        <div class="field"><label>Contraseña</label><input id="r-pass" type="password" placeholder="Mínimo 6 caracteres" /></div>
-        <div class="field"><label>Teléfono</label>
-          <input id="r-phone" type="tel" placeholder="80900000000" maxlength="11" oninput="this.value=this.value.replace(/\D/g,'').slice(0,11)" />
-          <span style="font-size:11px;color:var(--text3)">Exactamente 11 dígitos</span>
+      <!-- Step indicator -->
+      <div class="reg-steps-indicator">
+        <div class="reg-step-dot active" id="rdot-1">1</div>
+        <div class="reg-step-line" id="rline-1"></div>
+        <div class="reg-step-dot" id="rdot-2">2</div>
+        <div class="reg-step-line" id="rline-2"></div>
+        <div class="reg-step-dot" id="rdot-3">3</div>
+      </div>
+      <div class="reg-step-labels">
+        <span>Cuenta</span><span>Identidad</span><span>Verificación</span>
+      </div>
+
+      <!-- REG STEP 1: Datos de cuenta -->
+      <div id="rpanel-1" class="reg-panel active">
+        <h4 class="reg-panel-title">👤 Datos de Cuenta</h4>
+        <div class="form-grid">
+          <div class="field" style="grid-column:1/-1">
+            <label>Nombre Completo <span class="required-mark">*</span></label>
+            <input id="r-name" type="text" placeholder="Juan Antonio Pérez García"/>
+          </div>
+          <div class="field" style="grid-column:1/-1">
+            <label>Correo Electrónico <span class="required-mark">*</span></label>
+            <input id="r-email" type="email" placeholder="tucorreo@gmail.com"/>
+            <span class="field-hint">Recibirás confirmaciones aquí</span>
+          </div>
+          <div class="field">
+            <label>Contraseña <span class="required-mark">*</span></label>
+            <div class="pass-wrap"><input id="r-pass" type="password" placeholder="Mínimo 8 caracteres"/><button type="button" class="pass-toggle" onclick="togglePass('r-pass',this)">👁</button></div>
+            <div class="pass-strength" id="pass-strength"></div>
+          </div>
+          <div class="field">
+            <label>Confirmar Contraseña <span class="required-mark">*</span></label>
+            <div class="pass-wrap"><input id="r-pass2" type="password" placeholder="Repite tu contraseña"/><button type="button" class="pass-toggle" onclick="togglePass('r-pass2',this)">👁</button></div>
+          </div>
         </div>
-        <div class="field"><label>Cédula / ID</label>
-          <input id="r-cedula" type="text" placeholder="00100000000" maxlength="11" oninput="this.value=this.value.replace(/\D/g,'').slice(0,11)" />
-          <span style="font-size:11px;color:var(--text3)">Exactamente 11 dígitos</span>
+        <div class="reg-nav"><div></div><button class="btn btn-gold" onclick="regNext(1)">Siguiente →</button></div>
+      </div>
+
+      <!-- REG STEP 2: Identidad -->
+      <div id="rpanel-2" class="reg-panel hidden">
+        <h4 class="reg-panel-title">🪪 Identidad y Contacto</h4>
+        <div class="form-grid">
+          <div class="field">
+            <label>Cédula de Identidad <span class="required-mark">*</span></label>
+            <input id="r-cedula" type="text" placeholder="00100000000" maxlength="11" oninput="this.value=this.value.replace(/\D/g,'').slice(0,11)"/>
+            <span class="field-hint">Exactamente 11 dígitos</span>
+          </div>
+          <div class="field">
+            <label>Fecha de Nacimiento <span class="required-mark">*</span></label>
+            <input id="r-birth" type="date"/>
+            <span class="field-hint">Debes ser mayor de 18 años</span>
+          </div>
+          <div class="field">
+            <label>Teléfono <span class="required-mark">*</span></label>
+            <input id="r-phone" type="tel" placeholder="8095551234" maxlength="10" oninput="formatRegPhone(this)"/>
+            <span class="field-hint">809, 829 ó 849 — 10 dígitos</span>
+          </div>
+          <div class="field">
+            <label>Género <span class="required-mark">*</span></label>
+            <select id="r-gender">
+              <option value="">Seleccionar...</option>
+              <option value="masculino">Masculino</option>
+              <option value="femenino">Femenino</option>
+              <option value="otro">Prefiero no decir</option>
+            </select>
+          </div>
+          <div class="field" style="grid-column:1/-1">
+            <label>Dirección Completa <span class="required-mark">*</span></label>
+            <input id="r-address" type="text" placeholder="Calle, número, sector, ciudad, provincia"/>
+          </div>
+          <div class="field">
+            <label>Provincia <span class="required-mark">*</span></label>
+            <select id="r-province">
+              <option value="">Seleccionar...</option>
+              <option>Santiago</option><option>Distrito Nacional</option><option>Santo Domingo</option>
+              <option>La Vega</option><option>San Pedro de Macorís</option><option>Puerto Plata</option>
+              <option>La Romana</option><option>San Francisco de Macorís</option><option>Higüey</option>
+              <option>Otra</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Nacionalidad</label>
+            <input id="r-nationality" type="text" value="Dominicana" readonly style="opacity:.6"/>
+          </div>
+        </div>
+        <div class="reg-nav">
+          <button class="btn btn-ghost" onclick="regBack(2)">← Atrás</button>
+          <button class="btn btn-gold" onclick="regNext(2)">Siguiente →</button>
         </div>
       </div>
-      <button class="btn btn-gold btn-full" id="btn-do-register" onclick="doRegister()">Crear Cuenta</button>
+
+      <!-- REG STEP 3: Verificación -->
+      <div id="rpanel-3" class="reg-panel hidden">
+        <h4 class="reg-panel-title">🛡️ Verificación de Seguridad</h4>
+
+        <!-- Face verification status -->
+        <div class="verify-check-row" id="face-check-row">
+          <div class="vcr-icon" id="face-check-icon">⬜</div>
+          <div class="vcr-info">
+            <div class="vcr-title">Verificación Facial</div>
+            <div class="vcr-sub" id="face-check-sub">Requerida para confirmar tu identidad</div>
+          </div>
+          <button class="btn btn-ghost btn-sm" id="btn-face" onclick="startFaceRecognition()">Iniciar</button>
+        </div>
+
+        <!-- CAPTCHA status -->
+        <div class="verify-check-row" id="captcha-check-row" style="opacity:.5;pointer-events:none">
+          <div class="vcr-icon" id="captcha-check-icon">⬜</div>
+          <div class="vcr-info">
+            <div class="vcr-title">Verificación Anti-Bot (3 pasos)</div>
+            <div class="vcr-sub" id="captcha-check-sub">Completa la verificación facial primero</div>
+          </div>
+          <button class="btn btn-ghost btn-sm" id="btn-captcha" onclick="startCaptcha()">Iniciar</button>
+        </div>
+
+        <!-- Government DB check -->
+        <div class="verify-check-row" id="govt-check-row" style="opacity:.5;pointer-events:none">
+          <div class="vcr-icon" id="govt-check-icon">⬜</div>
+          <div class="vcr-info">
+            <div class="vcr-title">Validación Cédula RD</div>
+            <div class="vcr-sub" id="govt-check-sub">Verificación en base de datos JCE</div>
+          </div>
+          <div id="govt-spinner" class="hidden"><div class="mini-spin"></div></div>
+        </div>
+
+        <!-- Terms -->
+        <div class="terms-box" id="terms-box" style="display:none">
+          <label class="terms-check">
+            <input type="checkbox" id="r-terms"/>
+            <span>Acepto los <a href="#" onclick="return false" style="color:var(--gold)">Términos y Condiciones</a> y la <a href="#" onclick="return false" style="color:var(--gold)">Política de Privacidad</a> de FJAP Préstamos.</span>
+          </label>
+        </div>
+
+        <div class="reg-nav" style="margin-top:20px">
+          <button class="btn btn-ghost" onclick="regBack(3)">← Atrás</button>
+          <button class="btn btn-gold" id="btn-do-register" onclick="doRegister()" disabled style="opacity:.5">Crear Cuenta ✦</button>
+        </div>
+      </div>
+
       <p class="modal-toggle">¿Ya tienes cuenta? <a onclick="switchAuthTab('login')">Inicia sesión</a></p>
     </div>
   </div>
 </div>
 
-<!-- APP SHELL -->
+<!-- ══════════════ FACE RECOGNITION MODAL ══════════════ -->
+<div id="face-modal" class="modal-overlay hidden">
+  <div class="face-modal-inner" onclick="event.stopPropagation()">
+    <div class="face-modal-head">
+      <h3>🔐 Verificación Facial FJAP</h3>
+      <p>Sistema de reconocimiento de viveza — sin cámara</p>
+    </div>
+    <div class="face-frame-wrap">
+      <div class="face-frame" id="face-frame">
+        <div class="face-oval">
+          <div class="face-features">
+            <div class="face-eye left" id="feye-left"></div>
+            <div class="face-eye right" id="feye-right"></div>
+            <div class="face-nose"></div>
+            <div class="face-mouth" id="fmouth"></div>
+          </div>
+          <div class="face-arrow" id="face-arrow" style="display:none"></div>
+        </div>
+        <div class="face-scan-line" id="face-scan-line"></div>
+      </div>
+    </div>
+    <div class="face-instruction-wrap">
+      <div class="face-instruction-text" id="face-instruction">Preparando verificación...</div>
+      <div class="face-progress-bar-outer">
+        <div class="face-progress-bar-inner" id="face-progress-inner" style="width:0%"></div>
+      </div>
+    </div>
+    <div class="face-steps-row">
+      <div class="fstep" id="fstep-0">👁 Parpadear</div>
+      <div class="fstep" id="fstep-1">↩ Izq.</div>
+      <div class="fstep" id="fstep-2">↪ Der.</div>
+      <div class="fstep" id="fstep-3">😊 Sonreír</div>
+    </div>
+    <div id="face-done-box" class="face-done hidden">
+      ✅ Verificación facial completada exitosamente
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ CAPTCHA MODAL ══════════════ -->
+<div id="captcha-modal" class="modal-overlay hidden">
+  <div class="captcha-box" onclick="event.stopPropagation()">
+    <div class="captcha-header">
+      <div class="captcha-logo">🛡 FJAP Anti-Bot</div>
+      <div class="captcha-dots">
+        <span class="cap-dot active" id="capdot-1">1</span>
+        <span class="cap-dot" id="capdot-2">2</span>
+        <span class="cap-dot" id="capdot-3">3</span>
+      </div>
+    </div>
+
+    <!-- Step 1: Math -->
+    <div id="cap-panel-1" class="cap-panel">
+      <div class="cap-icon">🧮</div>
+      <h4>Demuestra que eres humano</h4>
+      <p class="cap-desc">Resuelve el siguiente problema matemático:</p>
+      <div class="math-challenge">
+        <div class="math-q" id="math-q">7 + 4 = ?</div>
+        <input id="math-ans" type="number" class="math-input" placeholder="Respuesta"/>
+      </div>
+      <div class="cap-err" id="cap-err-1"></div>
+      <button class="btn btn-gold btn-full" onclick="capNext(1)">Continuar →</button>
+    </div>
+
+    <!-- Step 2: Image selection -->
+    <div id="cap-panel-2" class="cap-panel hidden">
+      <div class="cap-icon">🖼️</div>
+      <h4 id="cap-img-title">Selecciona todas las imágenes con 🏠</h4>
+      <p class="cap-desc">Haz clic en las imágenes correctas</p>
+      <div class="img-grid" id="img-grid"></div>
+      <div class="cap-err" id="cap-err-2"></div>
+      <button class="btn btn-gold btn-full" onclick="capNext(2)">Verificar →</button>
+    </div>
+
+    <!-- Step 3: OTP -->
+    <div id="cap-panel-3" class="cap-panel hidden">
+      <div class="cap-icon">📱</div>
+      <h4>Código de Verificación SMS</h4>
+      <p class="cap-desc">Código enviado a tu número registrado</p>
+      <div class="otp-row" id="otp-row">
+        <input class="otp-input" maxlength="1" oninput="otpMove(this,0)"/>
+        <input class="otp-input" maxlength="1" oninput="otpMove(this,1)"/>
+        <input class="otp-input" maxlength="1" oninput="otpMove(this,2)"/>
+        <input class="otp-input" maxlength="1" oninput="otpMove(this,3)"/>
+        <input class="otp-input" maxlength="1" oninput="otpMove(this,4)"/>
+        <input class="otp-input" maxlength="1" oninput="otpMove(this,5)"/>
+      </div>
+      <div class="cap-hint" id="cap-hint-3">Código de prueba: <strong id="fake-otp"></strong></div>
+      <div class="cap-err" id="cap-err-3"></div>
+      <button class="btn btn-gold btn-full" onclick="capNext(3)">Verificar →</button>
+    </div>
+
+    <div id="cap-done" class="cap-done hidden">✅ Verificación completada</div>
+  </div>
+</div>
+
+<!-- ══════════════ APP SHELL ══════════════ -->
 <div id="app" class="hidden">
   <aside class="sidebar">
     <div class="sidebar-logo"><div class="logo">FJAP <span>App</span></div></div>
@@ -115,7 +349,7 @@
       <button class="nav-item active" data-page="home">      <span class="nav-icon">🏠</span><span>Resumen</span></button>
       <button class="nav-item" data-page="loans">            <span class="nav-icon">💳</span><span>Mis Préstamos</span></button>
       <button class="nav-item" data-page="apply">            <span class="nav-icon">✦</span><span>Nuevo Préstamo</span></button>
-      <button class="nav-item" data-page="pay">              <span class="nav-icon">💰</span><span>Pagar Préstamo</span></button>
+      <button class="nav-item" data-page="pay">              <span class="nav-icon">💰</span><span>Pagar Cuota</span></button>
       <button class="nav-item" data-page="wallet">           <span class="nav-icon">👛</span><span>Billetera</span></button>
       <button class="nav-item" data-page="business">         <span class="nav-icon">🏢</span><span>Empresarial</span></button>
       <button class="nav-item" data-page="accounting">       <span class="nav-icon">📒</span><span>Contabilidad</span></button>
@@ -137,7 +371,7 @@
       <div class="stat-grid">
         <div class="stat-card"><div class="label">Balance Billetera</div><div class="value" id="stat-balance">—</div><div class="sub">Disponible</div></div>
         <div class="stat-card"><div class="label">Total Préstamos</div><div class="value" id="stat-loans">0</div><div class="sub">Historial</div></div>
-        <div class="stat-card"><div class="label">Deuda Activa</div><div class="value" id="stat-debt">$0</div><div class="sub">Por pagar</div></div>
+        <div class="stat-card"><div class="label">Deuda Activa</div><div class="value" id="stat-debt">RD$0</div><div class="sub">Por pagar</div></div>
         <div class="stat-card"><div class="label">Score FJAP</div><div class="value" id="stat-score">—</div><div class="sub">Crediticio</div></div>
       </div>
       <div class="card"><h3 style="font-size:16px;font-weight:700;margin-bottom:20px">📋 Préstamos Recientes</h3><div id="recent-loans" class="loans-grid"></div></div>
@@ -152,69 +386,67 @@
       <div class="loans-grid" id="loans-grid"></div>
     </div>
 
-    <!-- APPLY -->
+    <!-- APPLY (5 STEPS) -->
     <div id="page-apply" class="app-page hidden">
-      <div class="page-header"><div><div class="page-title"><span class="icon">✦</span> Solicitud de Préstamo</div><div class="page-subtitle">Evaluación multicapa FJAP</div></div></div>
+      <div class="page-header"><div><div class="page-title"><span class="icon">✦</span> Solicitud de Préstamo</div><div class="page-subtitle">Evaluación multicapa FJAP — Préstamo sin papel</div></div></div>
       <div class="steps-indicator">
         <div id="sdot-1" class="step-dot current">1</div><div id="sline-1" class="step-line pending"></div>
         <div id="sdot-2" class="step-dot pending">2</div><div id="sline-2" class="step-line pending"></div>
         <div id="sdot-3" class="step-dot pending">3</div><div id="sline-3" class="step-line pending"></div>
-        <div id="sdot-4" class="step-dot pending">4</div>
+        <div id="sdot-4" class="step-dot pending">4</div><div id="sline-4" class="step-line pending"></div>
+        <div id="sdot-5" class="step-dot pending">5</div>
       </div>
-      <div class="card" style="max-width:720px;margin:0 auto">
+      <div class="steps-labels">
+        <span>Financiero</span><span>Préstamo</span><span>Garantía</span><span>Evaluación IA</span><span>Firma</span>
+      </div>
+
+      <div class="card" style="max-width:740px;margin:0 auto">
+
+        <!-- STEP 1: Financial -->
         <div id="spanel-1" class="step-panel active">
-          <h3>1. Datos Personales</h3>
-          <p class="step-desc">Todos los campos requeridos. Información verificada.</p>
+          <h3>1. Perfil Financiero y Laboral</h3>
+          <p class="step-desc">Datos verificados por nuestro motor IA. Tus datos personales ya están registrados en tu cuenta.</p>
+          <div class="profile-banner" id="profile-banner"></div>
+          <div class="form-section-label">💰 Información Económica</div>
           <div class="form-grid">
-            <div class="field"><label>Fecha Nacimiento <span class="required-mark">*</span></label><input id="f-birthDate" type="date" /><span class="field-hint">18 a 70 años</span></div>
-            <div class="field"><label>Estado Civil <span class="required-mark">*</span></label><select id="f-marital"><option value="single">Soltero/a</option><option value="married">Casado/a</option><option value="divorced">Divorciado/a</option><option value="widowed">Viudo/a</option></select></div>
-            <div class="field"><label>Cédula <span class="required-mark">*</span></label><input id="f-cedula" type="text" placeholder="00100000000" maxlength="11" oninput="this.value=this.value.replace(/\D/g,'').slice(0,11)" /><span class="field-hint">Exactamente 11 dígitos</span></div>
-            <div class="field"><label>Dependientes <span class="required-mark">*</span></label><input id="f-dependents" type="number" value="0" min="0" max="20" /></div>
-            <div class="field" style="grid-column:1/-1"><label>Dirección <span class="required-mark">*</span></label><input id="f-address" type="text" placeholder="Calle, número, sector, ciudad" /></div>
+            <div class="field"><label>Ingreso Mensual Neto (DOP) <span class="required-mark">*</span></label><input id="f-income" type="number" placeholder="25000" min="0"/><span class="field-hint">Mínimo RD$5,000/mes</span></div>
+            <div class="field"><label>Deuda Mensual Actual</label><input id="f-debt" type="number" placeholder="0" value="0" min="0"/></div>
           </div>
-          <div class="step-info-box"><span class="sib-icon">🔒</span><span>Información protegida con <strong>encriptación bancaria</strong>.</span></div>
+          <div class="form-section-label" style="margin-top:20px">💼 Información Laboral</div>
+          <div class="form-grid">
+            <div class="field"><label>Tipo de Ocupación <span class="required-mark">*</span></label><select id="f-occupation"><option value="empleado">Empleado/a</option><option value="independiente">Independiente</option><option value="empresario">Empresario/a</option><option value="jubilado">Jubilado/a</option><option value="otro">Otro</option></select></div>
+            <div class="field"><label>Años en el Empleo <span class="required-mark">*</span></label><input id="f-empyears" type="number" placeholder="3" min="0" step="0.5"/></div>
+            <div class="field" style="grid-column:1/-1"><label>Empresa / Empleador <span class="required-mark">*</span></label><input id="f-employer" type="text" placeholder="Nombre de la empresa u organización"/></div>
+          </div>
+          <div class="form-section-label" style="margin-top:20px">👥 Referencias Personales <span style="font-weight:400;color:var(--text3)">(dos requeridas)</span></div>
+          <div class="form-grid">
+            <div class="field"><label>Nombre Referencia 1 <span class="required-mark">*</span></label><input id="f-ref1name" type="text" placeholder="Nombre completo"/></div>
+            <div class="field"><label>Teléfono Ref. 1 <span class="required-mark">*</span></label><input id="f-ref1phone" type="tel" placeholder="8095551234" maxlength="10" oninput="this.value=this.value.replace(/\D/g,'').slice(0,10)"/><span class="field-hint">10 dígitos</span></div>
+            <div class="field"><label>Nombre Referencia 2 <span class="required-mark">*</span></label><input id="f-ref2name" type="text" placeholder="Nombre completo"/></div>
+            <div class="field"><label>Teléfono Ref. 2 <span class="required-mark">*</span></label><input id="f-ref2phone" type="tel" placeholder="8295551234" maxlength="10" oninput="this.value=this.value.replace(/\D/g,'').slice(0,10)"/><span class="field-hint">10 dígitos</span></div>
+          </div>
+          <div class="step-info-box warning-box" style="margin-top:20px"><span class="sib-icon">⚠</span><span>Datos <strong>falsos</strong> resultan en rechazo y bloqueo permanente.</span></div>
         </div>
+
+        <!-- STEP 2: Loan Config -->
         <div id="spanel-2" class="step-panel">
-          <h3>2. Perfil Financiero</h3>
-          <p class="step-desc">Datos verificados por el motor IA. Sé preciso.</p>
-          <div class="form-section-label">💰 Económico</div>
-          <div class="form-grid">
-            <div class="field"><label>Ingreso Mensual <span class="required-mark">*</span></label><input id="f-income" type="number" placeholder="2500" min="0" /><span class="field-hint">Mínimo $500</span></div>
-            <div class="field"><label>Deuda Mensual</label><input id="f-debt" type="number" placeholder="0" value="0" min="0" /></div>
-          </div>
-          <div class="form-section-label" style="margin-top:20px">💼 Laboral</div>
-          <div class="form-grid">
-            <div class="field"><label>Ocupación <span class="required-mark">*</span></label><select id="f-occupation"><option value="empleado">Empleado/a</option><option value="independiente">Independiente</option><option value="empresario">Empresario</option><option value="jubilado">Jubilado</option><option value="otro">Otro</option></select></div>
-            <div class="field"><label>Años en Empleo <span class="required-mark">*</span></label><input id="f-empyears" type="number" placeholder="2" min="0" step="0.5" /></div>
-            <div class="field" style="grid-column:1/-1"><label>Empresa <span class="required-mark">*</span></label><input id="f-employer" type="text" placeholder="Nombre de la empresa" /></div>
-          </div>
-          <div class="form-section-label" style="margin-top:20px">👥 Referencias <span style="font-weight:400;color:var(--text3)">(dos requeridas)</span></div>
-          <div class="form-grid">
-            <div class="field"><label>Nombre Ref. 1 <span class="required-mark">*</span></label><input id="f-ref1name" type="text" placeholder="Nombre completo" /></div>
-            <div class="field"><label>Teléfono Ref. 1 <span class="required-mark">*</span></label><input id="f-ref1phone" type="tel" placeholder="80900000000" maxlength="11" oninput="this.value=this.value.replace(/\D/g,'').slice(0,11)" /><span class="field-hint">11 dígitos</span></div>
-            <div class="field"><label>Nombre Ref. 2 <span class="required-mark">*</span></label><input id="f-ref2name" type="text" placeholder="Nombre completo" /></div>
-            <div class="field"><label>Teléfono Ref. 2 <span class="required-mark">*</span></label><input id="f-ref2phone" type="tel" placeholder="80900000000" maxlength="11" oninput="this.value=this.value.replace(/\D/g,'').slice(0,11)" /><span class="field-hint">11 dígitos</span></div>
-          </div>
-          <div class="step-info-box warning-box" style="margin-top:20px"><span class="sib-icon">⚠</span><span>Datos <strong>falsos</strong> = rechazo automático y bloqueo de cuenta.</span></div>
-        </div>
-        <div id="spanel-3" class="step-panel">
-          <h3>3. Configura tu Préstamo</h3>
-          <p class="step-desc">La tasa se asigna automáticamente según tu perfil.</p>
+          <h3>2. Configura tu Préstamo</h3>
+          <p class="step-desc">La tasa de interés se asigna automáticamente según tu Score FJAP.</p>
           <div style="margin-bottom:24px"><label style="font-size:13px;color:var(--text2);font-weight:500;display:block;margin-bottom:10px">Moneda</label><div class="currency-grid" id="currency-grid"></div><div class="currency-label" id="currency-label"></div></div>
           <div class="amount-display">
             <div style="font-size:13px;color:var(--text2);margin-bottom:8px">Monto Solicitado</div>
-            <div class="amount-big" id="amount-big"><span class="amount-sym">$</span>5,000</div>
-            <input type="range" id="amt-slider" min="100" max="50000" step="100" value="5000" style="margin-top:20px" />
-            <div class="range-labels"><span id="range-min">$100</span><span id="range-max">$50,000</span></div>
+            <div class="amount-big" id="amount-big"><span class="amount-sym">RD$</span>25,000</div>
+            <input type="range" id="amt-slider" min="1000" max="100000" step="500" value="25000" style="margin-top:20px"/>
+            <div class="range-labels"><span id="range-min">RD$1,000</span><span id="range-max">RD$100,000</span></div>
           </div>
           <div class="form-grid" style="margin-top:20px">
-            <div class="field"><label>Plazo: <span id="term-val">12</span> meses</label><input type="range" id="term-slider" min="1" max="60" step="1" value="12" style="margin-top:8px" /><div class="range-labels"><span>1 mes</span><span>60 meses</span></div></div>
-            <div class="field"><label>Propósito</label><select id="sel-purpose"><option value="negocio">Negocio</option><option value="vehiculo">Vehículo</option><option value="hogar">Hogar</option><option value="deudas">Consolidar Deudas</option><option value="otros" selected>Otros</option></select></div>
-            <div class="field"><label>Frecuencia</label><select id="sel-payment"><option value="monthly" selected>Mensual</option><option value="biweekly">Quincenal</option><option value="weekly">Semanal</option></select></div>
-            <div class="field"><label>Amortización</label><select id="sel-amort"><option value="french" selected>Francés (Cuota Fija)</option><option value="german">Alemán (Capital Fijo)</option><option value="american">Americano</option></select></div>
+            <div class="field"><label>Plazo: <span id="term-val">12</span> meses</label><input type="range" id="term-slider" min="1" max="84" step="1" value="12" style="margin-top:8px"/><div class="range-labels"><span>1 mes</span><span>84 meses</span></div></div>
+            <div class="field"><label>Propósito del Préstamo</label><select id="sel-purpose"><option value="negocio">Inversión Negocio</option><option value="vehiculo">Vehículo</option><option value="hogar">Hogar / Remodelación</option><option value="educacion">Educación</option><option value="salud">Salud / Emergencia</option><option value="deudas">Consolidar Deudas</option><option value="otros" selected>Otros</option></select></div>
+            <div class="field"><label>Frecuencia de Pago</label><select id="sel-payment"><option value="monthly" selected>Mensual</option><option value="biweekly">Quincenal</option><option value="weekly">Semanal</option></select></div>
+            <div class="field"><label>Sistema de Amortización</label><select id="sel-amort"><option value="french" selected>Francés (Cuota Fija)</option><option value="german">Alemán (Capital Fijo)</option><option value="american">Americano</option></select></div>
           </div>
           <div class="rate-preview-box">
-            <div class="rpb-title">📊 Tasas por Perfil</div>
+            <div class="rpb-title">📊 Tasas por Perfil de Riesgo</div>
             <div class="rpb-grid">
               <div class="rpb-item tier-aaa"><span class="rpb-tier">AAA</span><span class="rpb-rate">11.5%</span><span class="rpb-desc">800+</span></div>
               <div class="rpb-item tier-aa"><span class="rpb-tier">AA</span><span class="rpb-rate">13.5%</span><span class="rpb-desc">720+</span></div>
@@ -224,6 +456,61 @@
             </div>
           </div>
         </div>
+
+        <!-- STEP 3: Guarantee + Bank -->
+        <div id="spanel-3" class="step-panel">
+          <h3>3. Garantía y Cuenta Bancaria</h3>
+          <p class="step-desc">Información requerida para el desembolso y respaldo del préstamo.</p>
+          <div class="form-section-label">🛡 Tipo de Garantía</div>
+          <div class="form-grid">
+            <div class="field"><label>Tipo de Garantía <span class="required-mark">*</span></label>
+              <select id="f-guarantee-type" onchange="toggleGuaranteeDetail(this.value)">
+                <option value="personal">Personal / Sin garantía física</option>
+                <option value="fiador">Fiador / Codeudor</option>
+                <option value="vehiculo">Prenda (Vehículo)</option>
+                <option value="inmueble">Hipotecaria (Inmueble)</option>
+              </select>
+            </div>
+            <div class="field" id="guarantee-detail-field">
+              <label>Descripción de la Garantía</label>
+              <input id="f-guarantee-detail" type="text" placeholder="Ej: Toyota Corolla 2020 placa A001234"/>
+            </div>
+          </div>
+          <div id="fiador-fields" style="display:none">
+            <div class="form-grid">
+              <div class="field"><label>Nombre del Fiador <span class="required-mark">*</span></label><input id="f-fiador-name" type="text" placeholder="Nombre completo del fiador"/></div>
+              <div class="field"><label>Cédula del Fiador <span class="required-mark">*</span></label><input id="f-fiador-cedula" type="text" placeholder="00100000000" maxlength="11" oninput="this.value=this.value.replace(/\D/g,'').slice(0,11)"/></div>
+            </div>
+          </div>
+          <div class="form-section-label" style="margin-top:24px">🏦 Cuenta Bancaria para Desembolso</div>
+          <div class="form-grid">
+            <div class="field"><label>Banco <span class="required-mark">*</span></label>
+              <select id="f-bank">
+                <option value="">Seleccionar banco...</option>
+                <option>Banco Popular Dominicano</option>
+                <option>BanReservas</option>
+                <option>Banco BHD León</option>
+                <option>Scotiabank RD</option>
+                <option>Banco Santa Cruz</option>
+                <option>Banesco</option>
+                <option>Asociación Cibao</option>
+                <option>Asociación Popular</option>
+                <option>JMMB Bank</option>
+                <option>Otro</option>
+              </select>
+            </div>
+            <div class="field"><label>Tipo de Cuenta <span class="required-mark">*</span></label>
+              <select id="f-account-type">
+                <option value="ahorro">Cuenta de Ahorro</option>
+                <option value="corriente">Cuenta Corriente</option>
+              </select>
+            </div>
+            <div class="field" style="grid-column:1/-1"><label>Número de Cuenta <span class="required-mark">*</span></label><input id="f-account-number" type="text" placeholder="0000000000000" maxlength="16" oninput="this.value=this.value.replace(/\D/g,'').slice(0,16)"/><span class="field-hint">Solo números — sin guiones ni espacios</span></div>
+          </div>
+          <div class="step-info-box"><span class="sib-icon">🔒</span><span>El desembolso se realizará a la cuenta indicada. También puedes recibirlo en tu <strong>billetera virtual FJAP</strong>.</span></div>
+        </div>
+
+        <!-- STEP 4: AI Evaluation -->
         <div id="spanel-4" class="step-panel">
           <div class="verify-header">
             <div class="verify-spinner-wrap" id="verify-spinner-wrap"><div class="spin-ring"></div></div>
@@ -234,36 +521,44 @@
           <div class="verify-phases-list" id="verify-phases-list"></div>
           <div class="verify-result hidden" id="verify-result"></div>
         </div>
+
+        <!-- STEP 5: Digital Signature (shown separately as page) -->
+        <div id="spanel-5" class="step-panel"></div>
+
         <div style="display:flex;justify-content:space-between;margin-top:32px;padding-top:20px;border-top:1px solid var(--border)">
           <button id="btn-back" class="btn btn-ghost" onclick="applyBack()" style="display:none">← Atrás</button>
           <div style="flex:1"></div>
           <button id="btn-next" class="btn btn-gold" onclick="applyNext()">Continuar →</button>
-          <button id="btn-submit" class="btn btn-gold" onclick="submitLoan()" style="display:none">✅ Confirmar y Recibir Fondos</button>
+          <button id="btn-to-sign" class="btn btn-gold" onclick="goToSign()" style="display:none">✍️ Ir a Firma Digital</button>
         </div>
       </div>
     </div>
 
-    <!-- PAY LOAN -->
-    <div id="page-pay" class="app-page hidden">
+    <!-- LOAN SIGN PAGE -->
+    <div id="page-loan-sign" class="app-page hidden">
       <div class="page-header">
-        <div><div class="page-title"><span class="icon">💰</span> Pagar Préstamo</div><div class="page-subtitle">Paga tus cuotas con tarjeta de crédito o débito</div></div>
+        <div><div class="page-title"><span class="icon">✍️</span> Firma Digital y Desembolso</div><div class="page-subtitle">Último paso — Préstamo sin papel</div></div>
       </div>
-      <div id="pay-content"></div>
+      <div id="sign-content"></div>
     </div>
 
     <!-- LOAN DETAIL -->
     <div id="page-loan-detail" class="app-page hidden"></div>
 
+    <!-- PAY LOAN -->
+    <div id="page-pay" class="app-page hidden">
+      <div class="page-header"><div><div class="page-title"><span class="icon">💰</span> Pagar Cuota</div><div class="page-subtitle">Paga con tarjeta de crédito o débito</div></div></div>
+      <div id="pay-content"></div>
+    </div>
+
     <!-- WALLET -->
     <div id="page-wallet" class="app-page hidden">
-      <div class="page-header">
-        <div><div class="page-title"><span class="icon">👛</span> Billetera Virtual</div><div class="page-subtitle">Operaciones con tarjeta de crédito o débito</div></div>
-      </div>
+      <div class="page-header"><div><div class="page-title"><span class="icon">👛</span> Billetera Virtual</div><div class="page-subtitle">Operaciones con tarjeta bancaria</div></div></div>
       <div class="wallet-hero">
         <div>
           <div class="wallet-balance-label">Saldo Disponible</div>
-          <div class="wallet-balance" id="wallet-balance">$0.00</div>
-          <div style="color:var(--text2);font-size:13px;margin-top:4px" id="wallet-currency">🇺🇸 USD</div>
+          <div class="wallet-balance" id="wallet-balance">RD$0.00</div>
+          <div style="color:var(--text2);font-size:13px;margin-top:4px" id="wallet-currency">🇩🇴 DOP</div>
         </div>
         <div class="wallet-actions">
           <button class="btn btn-gold" onclick="openCardModal('deposit')">⬇ Depositar</button>
@@ -276,9 +571,7 @@
 
     <!-- BUSINESS -->
     <div id="page-business" class="app-page hidden">
-      <div class="page-header">
-        <div><div class="page-title"><span class="icon">🏢</span> Módulo Empresarial</div><div class="page-subtitle">Gestión para prestamistas y negocios FJAP</div></div>
-      </div>
+      <div class="page-header"><div><div class="page-title"><span class="icon">🏢</span> Módulo Empresarial</div><div class="page-subtitle">Gestión para prestamistas y negocios FJAP</div></div></div>
       <div class="biz-tabs">
         <button class="biz-tab active" onclick="showBizTab('portfolio')">👥 Cartera</button>
         <button class="biz-tab" onclick="showBizTab('collectors')">🚴 Cobradores</button>
@@ -298,37 +591,28 @@
       <div id="accounting-content"></div>
     </div>
 
-    <!-- AI ASSISTANT -->
+    <!-- AI -->
     <div id="page-ai" class="app-page hidden">
-      <div class="page-header">
-        <div><div class="page-title"><span class="icon">🤖</span> Asistente IA FJAP</div><div class="page-subtitle">Chatbot financiero · Análisis de riesgo · Recomendaciones</div></div>
-      </div>
+      <div class="page-header"><div><div class="page-title"><span class="icon">🤖</span> Asistente IA FJAP</div><div class="page-subtitle">Chatbot financiero · Análisis · Recomendaciones</div></div></div>
       <div class="ai-layout">
         <div class="ai-chat-wrap">
           <div class="ai-messages" id="ai-messages">
-            <div class="ai-msg ai-msg-bot">
-              <div class="ai-avatar">🤖</div>
-              <div class="ai-bubble">¡Hola! Soy el <strong>Asistente Financiero FJAP</strong>. Puedo ayudarte con:<br><br>• Analizar tu perfil de crédito<br>• Calcular cuotas y tasas<br>• Detectar riesgos financieros<br>• Recomendarte el mejor plan<br>• Información sobre tus préstamos<br><br>¿En qué te puedo ayudar hoy?</div>
-            </div>
+            <div class="ai-msg ai-msg-bot"><div class="ai-avatar">🤖</div><div class="ai-bubble">¡Hola! Soy el <strong>Asistente Financiero FJAP</strong>. Puedo ayudarte con:<br><br>• Tu perfil de crédito y Score FJAP<br>• Calcular cuotas y tasas de interés<br>• Analizar riesgo de morosidad<br>• Recomendarte el mejor plan de préstamo<br>• Información sobre tus préstamos activos<br><br>¿En qué te puedo ayudar hoy?</div></div>
           </div>
           <div class="ai-input-wrap">
-            <input id="ai-input" type="text" placeholder="Escribe tu pregunta financiera..." onkeydown="if(event.key==='Enter')sendAiMessage()" />
+            <input id="ai-input" type="text" placeholder="Escribe tu pregunta financiera..." onkeydown="if(event.key==='Enter')sendAiMessage()"/>
             <button class="btn btn-gold" onclick="sendAiMessage()">Enviar ✦</button>
           </div>
         </div>
         <div class="ai-sidebar">
-          <div class="card" style="margin-bottom:16px">
-            <h4 style="font-size:13px;font-weight:700;margin-bottom:12px">🔍 Mi Perfil de Riesgo</h4>
-            <div id="ai-risk-panel"></div>
-          </div>
-          <div class="card">
-            <h4 style="font-size:13px;font-weight:700;margin-bottom:12px">💡 Preguntas Rápidas</h4>
+          <div class="card" style="margin-bottom:16px"><h4 style="font-size:13px;font-weight:700;margin-bottom:12px">🔍 Mi Perfil de Riesgo</h4><div id="ai-risk-panel"></div></div>
+          <div class="card"><h4 style="font-size:13px;font-weight:700;margin-bottom:12px">💡 Preguntas Rápidas</h4>
             <div class="ai-quick-btns">
               <button class="ai-quick-btn" onclick="quickAsk('¿Cuánto puedo pedir prestado con mi perfil actual?')">¿Cuánto puedo pedir?</button>
               <button class="ai-quick-btn" onclick="quickAsk('¿Cómo mejoro mi score FJAP?')">Mejorar mi score</button>
-              <button class="ai-quick-btn" onclick="quickAsk('Analiza mis préstamos activos y dime si hay riesgo de morosidad')">Riesgo de morosidad</button>
-              <button class="ai-quick-btn" onclick="quickAsk('¿Cuál es el mejor plan de pago para mi deuda actual?')">Mejor plan de pago</button>
-              <button class="ai-quick-btn" onclick="quickAsk('Explícame las tasas de interés disponibles en FJAP')">Ver tasas</button>
+              <button class="ai-quick-btn" onclick="quickAsk('Analiza mis préstamos y dime si hay riesgo de mora')">Riesgo de morosidad</button>
+              <button class="ai-quick-btn" onclick="quickAsk('¿Cuál es el mejor plan de pago para mi deuda?')">Mejor plan de pago</button>
+              <button class="ai-quick-btn" onclick="quickAsk('Explícame las tasas de interés de FJAP')">Ver tasas</button>
             </div>
           </div>
         </div>
@@ -338,36 +622,26 @@
   </main>
 </div>
 
-<!-- CARD MODAL (Billetera) -->
+<!-- CARD MODAL -->
 <div id="card-modal-overlay" class="modal-overlay hidden" onclick="if(event.target===this)closeCardModal()">
   <div class="card-modal" onclick="event.stopPropagation()">
-    <div class="card-modal-header">
-      <h3 id="card-modal-title">Operación</h3>
-      <button class="btn btn-ghost btn-sm" onclick="closeCardModal()">✕</button>
-    </div>
+    <div class="card-modal-header"><h3 id="card-modal-title">Operación</h3><button class="btn btn-ghost btn-sm" onclick="closeCardModal()">✕</button></div>
     <div id="card-modal-err" class="alert alert-error" style="display:none;margin-bottom:12px"></div>
     <div class="card-preview">
       <div class="cp-chip">▣</div>
       <div class="cp-number" id="cp-number">•••• •••• •••• ••••</div>
-      <div class="cp-row">
-        <div><div class="cp-label">TITULAR</div><div class="cp-val" id="cp-name">TU NOMBRE</div></div>
-        <div><div class="cp-label">VENCE</div><div class="cp-val" id="cp-exp">MM/AA</div></div>
-      </div>
+      <div class="cp-row"><div><div class="cp-label">TITULAR</div><div class="cp-val" id="cp-name">TU NOMBRE</div></div><div><div class="cp-label">VENCE</div><div class="cp-val" id="cp-exp">MM/AA</div></div></div>
     </div>
     <div style="display:flex;flex-direction:column;gap:14px;margin-top:4px">
-      <div class="field">
-        <label>Número de Tarjeta <span class="required-mark">*</span></label>
-        <input id="card-number" type="text" placeholder="0000 0000 0000 0000" maxlength="19" oninput="formatCardNumber(this)" autocomplete="cc-number" />
-        <span class="field-hint">Exactamente 16 dígitos · Crédito o Débito</span>
-      </div>
+      <div class="field"><label>Número de Tarjeta <span class="required-mark">*</span></label><input id="card-number" type="text" placeholder="0000 0000 0000 0000" maxlength="19" oninput="formatCardNumber(this)" autocomplete="cc-number"/><span class="field-hint">Exactamente 16 dígitos · Crédito o Débito</span></div>
       <div class="form-grid">
-        <div class="field"><label>Vencimiento <span class="required-mark">*</span></label><input id="card-exp" type="text" placeholder="MM/AA" maxlength="5" oninput="formatCardExp(this)" /></div>
-        <div class="field"><label>CVV <span class="required-mark">*</span></label><input id="card-cvv" type="password" placeholder="•••" maxlength="4" oninput="this.value=this.value.replace(/\D/g,'').slice(0,4)" /><span class="field-hint">3 o 4 dígitos</span></div>
+        <div class="field"><label>Vencimiento <span class="required-mark">*</span></label><input id="card-exp" type="text" placeholder="MM/AA" maxlength="5" oninput="formatCardExp(this)"/></div>
+        <div class="field"><label>CVV <span class="required-mark">*</span></label><input id="card-cvv" type="password" placeholder="•••" maxlength="4" oninput="this.value=this.value.replace(/\D/g,'').slice(0,4)"/><span class="field-hint">3 o 4 dígitos</span></div>
       </div>
-      <div class="field"><label>Titular <span class="required-mark">*</span></label><input id="card-name" type="text" placeholder="JUAN PÉREZ" oninput="document.getElementById('cp-name').textContent=this.value.toUpperCase()||'TU NOMBRE'" /></div>
-      <div class="field"><label>Monto <span class="required-mark">*</span></label><input id="card-amount" type="number" placeholder="0.00" min="1" /></div>
-      <div id="card-transfer-row" class="field" style="display:none"><label>Email Destinatario</label><input id="card-recipient" type="email" placeholder="destinatario@email.com" /></div>
-      <div class="field"><label>Descripción</label><input id="card-desc" type="text" placeholder="..." /></div>
+      <div class="field"><label>Titular <span class="required-mark">*</span></label><input id="card-name" type="text" placeholder="JUAN PÉREZ" oninput="document.getElementById('cp-name').textContent=this.value.toUpperCase()||'TU NOMBRE'"/></div>
+      <div class="field"><label>Monto <span class="required-mark">*</span></label><input id="card-amount" type="number" placeholder="0.00" min="1"/></div>
+      <div id="card-transfer-row" class="field" style="display:none"><label>Email Destinatario</label><input id="card-recipient" type="email" placeholder="destinatario@email.com"/></div>
+      <div class="field"><label>Descripción</label><input id="card-desc" type="text" placeholder="..."/></div>
       <div style="display:flex;gap:10px">
         <button class="btn btn-ghost btn-full" onclick="closeCardModal()">Cancelar</button>
         <button class="btn btn-gold btn-full" onclick="submitCardOp()">🔐 Procesar Pago</button>
@@ -379,30 +653,21 @@
 <!-- PAY LOAN CARD MODAL -->
 <div id="pay-card-overlay" class="modal-overlay hidden" onclick="if(event.target===this)closePayCardModal()">
   <div class="card-modal" onclick="event.stopPropagation()">
-    <div class="card-modal-header">
-      <h3>💳 Pago de Cuota con Tarjeta</h3>
-      <button class="btn btn-ghost btn-sm" onclick="closePayCardModal()">✕</button>
-    </div>
+    <div class="card-modal-header"><h3>💳 Pago de Cuota</h3><button class="btn btn-ghost btn-sm" onclick="closePayCardModal()">✕</button></div>
     <div id="pay-card-err" class="alert alert-error" style="display:none;margin-bottom:12px"></div>
     <div class="pay-summary-box" id="pay-summary-box"></div>
     <div class="card-preview">
       <div class="cp-chip">▣</div>
       <div class="cp-number" id="pcp-number">•••• •••• •••• ••••</div>
-      <div class="cp-row">
-        <div><div class="cp-label">TITULAR</div><div class="cp-val" id="pcp-name">TU NOMBRE</div></div>
-        <div><div class="cp-label">VENCE</div><div class="cp-val" id="pcp-exp">MM/AA</div></div>
-      </div>
+      <div class="cp-row"><div><div class="cp-label">TITULAR</div><div class="cp-val" id="pcp-name">TU NOMBRE</div></div><div><div class="cp-label">VENCE</div><div class="cp-val" id="pcp-exp">MM/AA</div></div></div>
     </div>
     <div style="display:flex;flex-direction:column;gap:14px;margin-top:4px">
-      <div class="field"><label>Número de Tarjeta <span class="required-mark">*</span></label>
-        <input id="pay-card-number" type="text" placeholder="0000 0000 0000 0000" maxlength="19" oninput="formatPayCard(this)" />
-        <span class="field-hint">Exactamente 16 dígitos</span>
-      </div>
+      <div class="field"><label>Número de Tarjeta <span class="required-mark">*</span></label><input id="pay-card-number" type="text" placeholder="0000 0000 0000 0000" maxlength="19" oninput="formatPayCard(this)"/><span class="field-hint">Exactamente 16 dígitos</span></div>
       <div class="form-grid">
-        <div class="field"><label>Vencimiento <span class="required-mark">*</span></label><input id="pay-card-exp" type="text" placeholder="MM/AA" maxlength="5" oninput="formatPayCardExp(this)" /></div>
-        <div class="field"><label>CVV <span class="required-mark">*</span></label><input id="pay-card-cvv" type="password" placeholder="•••" maxlength="4" oninput="this.value=this.value.replace(/\D/g,'').slice(0,4)" /></div>
+        <div class="field"><label>Vencimiento <span class="required-mark">*</span></label><input id="pay-card-exp" type="text" placeholder="MM/AA" maxlength="5" oninput="formatPayCardExp(this)"/></div>
+        <div class="field"><label>CVV <span class="required-mark">*</span></label><input id="pay-card-cvv" type="password" placeholder="•••" maxlength="4" oninput="this.value=this.value.replace(/\D/g,'').slice(0,4)"/></div>
       </div>
-      <div class="field"><label>Titular <span class="required-mark">*</span></label><input id="pay-card-name" type="text" placeholder="JUAN PÉREZ" oninput="document.getElementById('pcp-name').textContent=this.value.toUpperCase()||'TU NOMBRE'" /></div>
+      <div class="field"><label>Titular <span class="required-mark">*</span></label><input id="pay-card-name" type="text" placeholder="JUAN PÉREZ" oninput="document.getElementById('pcp-name').textContent=this.value.toUpperCase()||'TU NOMBRE'"/></div>
       <div style="display:flex;gap:10px">
         <button class="btn btn-ghost btn-full" onclick="closePayCardModal()">Cancelar</button>
         <button class="btn btn-gold btn-full" onclick="confirmLoanPayment()">✅ Confirmar Pago</button>
@@ -414,13 +679,7 @@
 <!-- INVOICE MODAL -->
 <div id="invoice-overlay" class="modal-overlay hidden" onclick="if(event.target===this)closeInvoice()">
   <div class="invoice-modal" onclick="event.stopPropagation()">
-    <div class="invoice-bar">
-      <h3>🧾 Factura Digital</h3>
-      <div class="invoice-bar-right">
-        <button class="btn btn-gold btn-sm" onclick="printInvoice()">🖨 Imprimir</button>
-        <button class="btn btn-ghost btn-sm" onclick="closeInvoice()">✕</button>
-      </div>
-    </div>
+    <div class="invoice-bar"><h3>🧾 Factura Digital</h3><div class="invoice-bar-right"><button class="btn btn-gold btn-sm" onclick="printInvoice()">🖨 Imprimir</button><button class="btn btn-ghost btn-sm" onclick="closeInvoice()">✕</button></div></div>
     <div class="inv-body" id="invoice-body"></div>
   </div>
 </div>
